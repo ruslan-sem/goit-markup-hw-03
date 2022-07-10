@@ -266,6 +266,12 @@ img {
 }
 
 /* portfolio */
+.filter-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
 .filter-btn {
   cursor: pointer;
   font-family: inherit;
@@ -274,12 +280,20 @@ img {
   line-height: calc(26 / 16);
   color: var(--dark-txt-cl);
   background-color: var(--command-bg-cl);
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
 }
 .filter-btn-current,
 .filter-btn:hover,
 .filter-btn:focus {
   color: var(--light-txt-cl);
   background-color: var(--accent-txt-cl);
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .portfolio-header {
   font-weight: 700;
