@@ -15,6 +15,9 @@
   --dark-bg-cl: #2f303a;
   --light-bg-cl: #ffffff;
   --command-bg-cl: #f5f4fa;
+
+  --card-gap: 30px;
+  --card-item: 3;
 }
 
 body {
@@ -232,7 +235,9 @@ img {
 }
 .command-list {
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
+  --card-gap: 30px;
+  --card-item: 4;
 }
 .command-item {
   background: var(--light-bg-cl);
@@ -295,14 +300,36 @@ img {
   flex-wrap: wrap;
   gap: 30px;
 }
+.portfolio-item {
+  border: 1px solid #eeeeee;
+}
+.portfolio-content {
+  padding: 20px 24px;
+}
 .portfolio-header {
   font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--dark-txt-cl);
+  margin-bottom: 4px;
 }
 .portfolio-type {
   font-size: 16px;
   line-height: calc(30 / 16);
+}
+
+/* cards */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: calc(-1 * var(--card-gap));
+    margin-top: calc(-1 * var(--card-gap)); */
+  gap: var(--card-gap);
+}
+.card-item {
+  /* margin-left: var(--card-gap);
+    margin-top: var(--card-gap);
+    flex-basis: calc(100% / var(--card-item) - var(--card-gap)); */
+  flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap)) / var(--card-item));
 }
