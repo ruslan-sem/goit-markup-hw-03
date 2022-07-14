@@ -16,6 +16,8 @@
   --light-bg-cl: #ffffff;
   --command-bg-cl: #f5f4fa;
 
+  --header-brd-cl: #ececec;
+
   --card-gap: 30px;
   --card-item: 3;
 }
@@ -92,9 +94,6 @@ img {
   display: flex;
   align-items: center;
 }
-.header {
-  border-bottom: 1px solid #ececec;
-}
 .header .logo {
   margin-right: 93px;
 }
@@ -141,6 +140,7 @@ img {
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--header-brd-cl);
 }
 .menu {
   color: var(--dark-txt-cl);
@@ -159,7 +159,6 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  margin-bottom: 94px;
 }
 .hero-title {
   font-weight: 900;
@@ -203,8 +202,7 @@ img {
 }
 /* feature */
 .feature-list {
-  display: flex;
-  gap: 30px;
+  --card-item: 4;
 }
 .feature-header {
   font-weight: 700;
@@ -216,27 +214,28 @@ img {
 }
 
 /* about */
+.about {
+  padding-top: 0;
+}
 .about-title {
   margin-bottom: 50px;
 }
-.about-list {
+/* .about-list {
   display: flex;
   gap: 30px;
-}
+} */
 
 /* command */
 .command {
   background-color: var(--command-bg-cl);
-  font-size: 16px;
-  line-height: calc(19 / 16);
 }
 .command-title {
   margin-bottom: 50px;
 }
 .command-list {
-  display: flex;
-  /* gap: 30px; */
-  --card-gap: 30px;
+  /* display: flex;
+  gap: 30px;
+  --card-gap: 30px; */
   --card-item: 4;
 }
 .command-item {
@@ -249,6 +248,11 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
+}
+.command-header,
+.command-text {
+  font-size: 16px;
+  line-height: calc(19 / 16);
 }
 .command-header {
   font-weight: 500;
@@ -268,6 +272,9 @@ img {
 }
 .footer-contacts {
   color: var(--light-link-cl);
+}
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 /* portfolio */
@@ -295,16 +302,9 @@ img {
   color: var(--light-txt-cl);
   background-color: var(--accent-txt-cl);
 }
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.portfolio-item {
-  border: 1px solid #eeeeee;
-}
 .portfolio-content {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 .portfolio-header {
   font-weight: 700;
